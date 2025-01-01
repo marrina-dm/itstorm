@@ -1,0 +1,33 @@
+@import '../../../assets/styles/variables';
+
+.policy {
+  padding: 40px 0 60px 0;
+
+  .container {
+    p, li {
+      color: $base-text-color;
+      line-height: 130%;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    h3 {
+      margin-top: 40px;
+      font-size: 24px;
+    }
+  }
+}
+
+ol {
+  list-style: none;
+  counter-reset: li;
+
+  &.first-list {
+    padding-left: 0;
+  }
+}
+
+li:before {
+  counter-increment: li;
+  content: counters(li,".") ". ";
+}

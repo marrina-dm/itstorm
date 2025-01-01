@@ -1,0 +1,199 @@
+@import '../../../../assets/styles/variables';
+
+.catalog {
+  padding: 80px 0 120px 0;
+
+  .container {
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .catalog-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 40px;
+
+      .catalog-applied-filters {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        .catalog-applied-filter {
+          box-sizing: border-box;
+          border: 2px solid $light-text-color;
+          border-radius: 5px;
+          background: rgb(255, 255, 255);
+          padding: 8px 20px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          span {
+            color: $light-text-color;
+            font-size: 16px;
+          }
+
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            display: flex;
+          }
+        }
+      }
+
+      .catalog-filter {
+        box-sizing: border-box;
+        cursor: pointer;
+        width: 148px;
+        min-width: 148px;
+        position: relative;
+
+        .catalog-filter-head {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          justify-content: space-between;
+          padding: 12px 0 12px 23px;
+
+          span {
+            color: $base-text-color;
+            font-size: 16px;
+          }
+        }
+
+        .catalog-filter-body {
+          position: absolute;
+          width: 100%;
+          z-index: 3;
+          display: none;
+          padding: 12px 23px;
+          border-radius: 0 0 5px 5px;
+          background: rgb(255, 255, 255);
+          box-sizing: border-box;
+          border: 2px solid rgb(185, 213, 253);
+
+          .catalog-filter-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            cursor: pointer;
+            color: rgb(190, 190, 190);
+            font-size: 16px;
+
+            .minus {
+              display: none;
+            }
+
+            .plus {
+              display: block;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &.active {
+              color: $base-text-color;
+
+              .minus {
+                display: block;
+              }
+
+              .plus {
+                display: none;
+              }
+            }
+          }
+        }
+
+        &.open {
+          width: 257px;
+          min-width: 257px;
+
+          .catalog-filter-head {
+            border-radius: 5px 5px 0 0;
+            background: #B9D5FD;
+            padding-right: 23px;
+
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+
+          .catalog-filter-body {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .catalog-articles {
+      .catalog-items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px 24px;
+      }
+
+      .empty-articles {
+        color: $base-text-color;
+        font-size: 16px;
+      }
+    }
+
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 60px;
+
+      .pagination-arrow {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .disabled-next {
+          transform: rotate(180deg);
+          cursor: not-allowed;
+        }
+
+        .disabled-next {
+          transform: rotate(180deg);
+          cursor: not-allowed;
+        }
+
+        .prev {
+          transform: rotate(180deg);
+        }
+
+        .disabled-prev {
+          cursor: not-allowed;
+        }
+      }
+
+      .pagination-pages {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .pagination-page {
+          text-decoration: none;
+          display: block;
+          padding: 10px;
+          color: $base-text-color;
+          font-size: 20px;
+          cursor: pointer;
+
+          &.active {
+            color: rgb(185, 213, 253);
+          }
+        }
+      }
+    }
+  }
+}

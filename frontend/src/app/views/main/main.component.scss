@@ -1,0 +1,331 @@
+@import '../../../assets/styles/variables';
+
+.banners {
+  padding-bottom: 60px;
+
+  .container {
+    position: relative;
+
+    .banner-item {
+      box-sizing: border-box;
+      background-position: center;
+      background-size: cover;
+      padding: 100px 0 0 80px;
+      height: 500px;
+
+      .banner-type {
+        color: rgb(112, 159, 220);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 4.8px;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-family: 'Lora', serif;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 130%;
+        color: white;
+        max-width: 610px;
+        margin: 0;
+
+        span {
+          color: $light-text-color;
+
+          &.no-wrap {
+            white-space: nowrap;
+            color: white;
+          }
+        }
+      }
+
+      .banner-text {
+        margin-top: 20px;
+        padding-bottom: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        line-height: 130%;
+        max-width: 456px;
+      }
+
+      .btn-small {
+        margin-top: 40px;
+      }
+    }
+
+    .arrow-prev,
+    .arrow-next {
+      position: absolute;
+      top: 236px;
+      z-index: 999999;
+      cursor: pointer;
+    }
+
+    .arrow-prev {
+      left: 10px;
+    }
+
+    .arrow-next {
+      right: 10px;
+    }
+  }
+}
+
+.services {
+  padding: 60px 0;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  .services-items {
+    display: flex;
+    justify-content: space-between;
+
+    .service-item {
+      width: 290px;
+      height: 498px;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        margin-top: 15px;
+      }
+
+      .service-item-text {
+        margin-top: 10px;
+        color: $base-text-color;
+        line-height: 130%;
+      }
+
+      .service-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+
+        .service-price {
+          color: $light-text-color;
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.about {
+  padding: 60px 0;
+
+  .container {
+    display: flex;
+    gap: 68px;
+    align-items: center;
+
+    .about-info {
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      .about-info-text {
+        color: rgb(30, 26, 43);
+        margin-bottom: 40px;
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      .adventures-title {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+
+      .adventures-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 71px;
+
+        .adventure-item {
+          width: 316px;
+          display: flex;
+          align-items: center;
+          gap: 26px;
+
+          &:first-child {
+            .adventure-number {
+              margin-right: 9px;
+            }
+          }
+
+          .adventure-number {
+            color: rgb(112, 159, 220);
+            font-family: 'Lora', serif;
+            font-size: 50px;
+            font-weight: 500;
+            position: relative;
+
+            &::before {
+              content: '';
+              position: absolute;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background: rgb(185, 213, 253);
+              z-index: -1;
+              top: 20px;
+              left: -10px;
+            }
+          }
+
+          .adventure-text {
+            color: rgb(30, 26, 43);
+            line-height: 130%;
+
+            span {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.blog {
+  padding: 60px 0;
+
+  .container {
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .blog-items {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .blog-actions a {
+      color: $light-text-color;
+      font-size: 20px;
+      font-weight: 500;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+
+      span {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.reviews {
+  padding: 60px 0;
+
+  .container {
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .reviews-carousel {
+      position: relative;
+
+      .review-item {
+        box-sizing: border-box;
+        border: 2px solid $light-text-color;
+        border-radius: 5px;
+        background: rgb(255, 255, 255);
+        width: 396px;
+        height: 267px;
+        padding: 30px;
+
+        .review-author {
+          display: flex;
+          align-items: center;
+          gap: 26px;
+          margin-bottom: 15px;
+
+          .review-author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+          }
+
+          .review-author-name {
+            color: $light-text-color;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        .review-text {
+          color: $base-text-color;
+          font-size: 16px;
+          line-height: 140%;
+        }
+      }
+
+      .arrow-prev,
+      .arrow-next {
+        position: absolute;
+        top: 118px;
+        z-index: 999999;
+        cursor: pointer;
+      }
+
+      .arrow-prev {
+        left: -25px;
+      }
+
+      .arrow-next {
+        right: -25px;
+      }
+    }
+
+  }
+}
+
+.contacts {
+  padding: 60px 0 120px 0;
+
+  .container {
+    display: flex;
+    gap: 26px;
+
+    .contacts-info {
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      .contact-head {
+        margin-bottom: 10px;
+        color: $light-text-color;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      .contact-text {
+        display: block;
+        text-decoration: none;
+        color: rgb(7, 23, 57);
+        line-height: 130%;
+        margin-bottom: 20px;
+        max-width: 501px;
+      }
+
+      .contact-socials {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+    }
+  }
+}

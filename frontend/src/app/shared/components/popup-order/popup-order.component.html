@@ -1,0 +1,63 @@
+<section class="popup">
+  <div class="close" (click)="close()">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="1.93562" y1="2.64999" x2="13.9564" y2="14.6708" stroke="#BEBEBE" stroke-linecap="round"/>
+      <line x1="13.9236" y1="2.62978" x2="1.90277" y2="14.6506" stroke="#BEBEBE" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <h2>{{ title }}</h2>
+  <div class="order-form" *ngIf="!isSuccess" [formGroup]="orderForm">
+    <div class="order-form-item" *ngIf="type === popupType.order">
+      <select
+        name="service"
+        id="service"
+        class="input"
+        formControlName="service"
+      >
+        <option *ngFor="let service of services" [value]="service.url">{{ service.name }}</option>
+      </select>
+    </div>
+    <div class="order-form-item">
+      <input
+        type="text"
+        class="input"
+        placeholder="Ваше имя"
+        formControlName="name"
+        [ngStyle]="{'border-color': orderForm.get('name')?.invalid
+             && (orderForm.get('name')?.dirty || orderForm.get('name')?.touched) ? 'red' : ''}"
+      >
+      <div *ngIf="orderForm.get('name')?.invalid && (orderForm.get('name')?.touched || orderForm.get('name')?.dirty)">
+        <div class="invalid-feedback" *ngIf="orderForm.get('name')?.errors?.['required']">
+          Введите имя
+        </div>
+      </div>
+    </div>
+    <div class="order-form-item">
+      <input
+        type="tel"
+        class="input"
+        placeholder="Ваш номер телефона"
+        prefix="+7 "
+        mask='(000) 000-00-00'
+        formControlName="phone"
+        [ngStyle]="{'border-color': orderForm.get('phone')?.invalid
+             && (orderForm.get('phone')?.dirty || orderForm.get('phone')?.touched) ? 'red' : ''}"
+      >
+      <div *ngIf="orderForm.get('phone')?.invalid && (orderForm.get('phone')?.touched || orderForm.get('phone')?.dirty)">
+        <div class="invalid-feedback" *ngIf="orderForm.get('phone')?.errors?.['required']">
+          Введите номер телефона
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="order-success-text" *ngIf="isSuccess">
+    Мы свяжемся с вами при первой же возможности.
+  </p>
+  <div class="order-actions">
+    <button class="btn" *ngIf="!isSuccess" [disabled]="orderForm.invalid" (click)="createOrder()">{{ buttonText }}</button>
+    <button class="btn btn-small" *ngIf="isSuccess" (click)="close()">Окей</button>
+  </div>
+  <p class="order-error" *ngIf="error">
+    произошла ошибка при отправке формы, попробуйте еще раз.
+  </p>
+</section>

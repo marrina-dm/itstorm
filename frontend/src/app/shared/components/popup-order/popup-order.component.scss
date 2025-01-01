@@ -1,0 +1,55 @@
+@import '../../../../assets/styles/variables';
+
+.popup {
+  background: rgb(255, 255, 255);
+  padding: 94px 153px 86px 152px;
+  position: relative;
+  text-align: center;
+
+  .close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    max-width: 443px;
+  }
+
+  .order-form-item {
+    margin-bottom: 5px;
+
+    input, select {
+      width: 422px;
+      appearance: none;
+    }
+
+    .invalid-feedback {
+      text-align: left;
+      color: red;
+    }
+  }
+
+  .order-success-text {
+    color: rgb(30, 26, 43);
+    font-weight: 500;
+  }
+
+  .order-actions {
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      margin-top: 20px;
+
+      &.btn-small {
+        margin-top: 40px;
+        width: 73px;
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}

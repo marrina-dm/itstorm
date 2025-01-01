@@ -1,0 +1,151 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.btn {
+  border-radius: 5px;
+  background: $light-text-color;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+  padding: 15px;
+  width: 422px;
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  border: 0;
+  display: block;
+
+  &.btn-small {
+    width: 163px;
+    padding: 15px;
+  }
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+}
+
+.input {
+  box-sizing: border-box;
+  border: 2px solid $light-text-color;
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  color: $light-text-color;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 17px 20px;
+  outline: none;
+
+  &::placeholder {
+    color: rgb(168, 171, 167);
+  }
+
+  &.password {
+    padding-right: 50px;
+  }
+}
+
+.mat-mdc-menu-item-text span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: $base-text-color;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: $light-text-color;
+  margin: 0;
+}
+
+h3 {
+  color: $light-text-color;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 130%;
+}
+
+p {
+  margin: 0;
+}
+
+.owl-theme {
+  .owl-dots {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 35px);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .owl-dot {
+
+      &.active span {
+        background: white;
+      }
+
+      &:hover span {
+        background: white;
+      }
+
+      span {
+        width: 10px;
+        height: 10px;
+        box-sizing: border-box;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 50%;
+        background: transparent;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.mat-mdc-dialog-container .mat-mdc-dialog-surface.mdc-dialog__surface {
+  border-radius: 10px;
+  border: 2px solid $light-text-color;
+}
+
+.detail-body-left-text {
+  h1,
+  h1 + p {
+    display: none;
+  }
+
+  p {
+    color: $base-text-color;
+    line-height: 130%;
+    margin-top: 20px;
+  }
+
+  h3 {
+    margin-top: 40px;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  ul, ol {
+    list-style-position: inside;
+  }
+}

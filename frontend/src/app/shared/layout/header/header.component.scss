@@ -1,0 +1,64 @@
+@import '../../../../assets/styles/variables';
+
+.header {
+  padding: 40px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+
+    .logo {
+      width: 85px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .header-menu {
+      margin-left: 100px;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 30px;
+        list-style: none;
+
+        a {
+          color: $base-text-color;
+          cursor: pointer;
+          text-decoration: none;
+
+          &.active {
+            color: $light-text-color;
+          }
+        }
+      }
+    }
+
+    .header-phone {
+      color: $light-text-color;
+      text-decoration: none;
+      margin-left: auto;
+    }
+
+    .header-actions {
+      margin-left: 89px;
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 7px;
+        cursor: pointer;
+      }
+
+      span {
+        color: $base-text-color;
+      }
+    }
+  }
+}

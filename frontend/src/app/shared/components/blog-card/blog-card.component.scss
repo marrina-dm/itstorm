@@ -1,0 +1,56 @@
+@import '../../../../assets/styles/variables';
+
+.blog-card {
+  width: 292px;
+  min-height: 571px;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .blog-card-tag {
+    position: absolute;
+    top: 10px;
+    right: 9px;
+    z-index: 2;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    padding: 10px 18px;
+    box-sizing: border-box;
+    color: rgb(112, 159, 220);
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .blog-card-image {
+    margin-bottom: 15px;
+    width: 291px;
+    height: 291px;
+    flex-shrink: 1;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .blog-card-name {
+    margin-bottom: 20px;
+  }
+
+  .blog-card-text {
+    color: $base-text-color;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+
+  .blog-card-detail {
+    margin-top: auto;
+
+    a {
+      color: $light-text-color;
+      font-size: 16px;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+  }
+}

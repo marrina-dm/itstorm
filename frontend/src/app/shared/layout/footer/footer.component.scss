@@ -1,0 +1,86 @@
+@import '../../../../assets/styles/variables';
+
+.footer {
+  padding: 40px 0 54px 0;
+  background-color: rgb(185, 213, 253);
+
+  .container {
+    font-size: 16px;
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+
+      .logo {
+        width: 85px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .footer-menu {
+        margin-left: 40px;
+
+        ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          gap: 20px;
+          list-style: none;
+
+          a {
+            color: $base-text-color;
+            cursor: pointer;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      display: flex;
+      gap: 60px;
+
+      .footer-bottom-block {
+        .footer-head {
+          color: $light-text-color;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: $base-text-color;
+          line-height: 130%;
+          max-width: 253px;
+          margin: 0;
+        }
+
+        a {
+          color: $base-text-color;
+          text-decoration: none;
+        }
+
+        .btn-small {
+          margin-top: 10px;
+          padding: 10px;
+          font-size: 12px;
+          font-weight: 500;
+        }
+
+        .footer-socials {
+          padding-top: 5px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+      }
+    }
+
+    .copyright {
+      margin: 6px 0 0 0;
+      color: $light-text-color;
+    }
+  }
+}

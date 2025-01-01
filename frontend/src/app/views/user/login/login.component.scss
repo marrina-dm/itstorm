@@ -1,0 +1,15 @@
+@import '../../../../assets/styles/auth-form';
+
+.login {
+  padding: 106px 0 92px 0;
+
+  .container {
+    gap: 178px;
+
+    .auth-checkbox {
+      input {
+        margin: 2px 0 0 0;
+      }
+    }
+  }
+}
